@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Studio Glimmer</title>
+    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="icon" href="img/Logotipo/icon.png" type="image/png">
+</head>
+<body>
+    <div class="login-container">
+        <img src="img/Logotipo/Logo-marron.png" alt="Logo">
+        <div id="form-content">
+            <!-- Formulário de Login -->
+            <div id="login-form" class="form-section">
+                <h2>Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">Chave de acesso:</label>
+                        <input type="text" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Senha:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="login-remember-me">
+                        <label for="login-remember-me">Lembre de mim</label>
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="login-options">
+                    <a href="#" id="show-register">Cadastre-se</a>
+                    <a href="#" id="show-forgot-password">Esqueci minha senha</a>
+                </div>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <div id="register-form" class="form-section" style="display:none;">
+                <h2>Cadastro</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="register-nome">Nome:</label>
+                        <input type="text" id="register-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Senha:</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirmar Senha:</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                </form>
+                <div class="login-options">
+                    <a href="#" id="show-login">Já tem uma conta? Entre</a>
+                </div>
+            </div>
+
+            <!-- Formulário de Recuperação de Senha -->
+            <div id="forgot-password-form" class="form-section" style="display:none;">
+                <h2>Redefinir Senha</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="forgot-email">Email:</label>
+                        <input type="email" id="forgot-email" required>
+                    </div>
+                    <button type="submit">Enviar link de redefinição</button>
+                </form>
+                <div class="login-options">
+                    <a href="#" id="show-login-from-forgot">Voltar para Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

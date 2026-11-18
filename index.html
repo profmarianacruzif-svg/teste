@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Glimmer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/Logotipo/icon.png" type="image/png">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="Index.html"><img src="img/Logotipo/Logo.min.png" alt="Nosso Salão" id="logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">HOME</a></li>
+                        <li><a href="Servicos.html">SERVIÇOS</a></li>
+                        <li><a href="Produtos.html">PRODUTOS</a></li>
+                        <li><a href="Profissionais.html">PROFISSIONAIS</a></li>
+                        <li><a href="Comentarios.html">COMENTÁRIOS</a></li>
+                        <li><a href="Agenda.html">minha agenda</a></li>
+                    </ul>
+                </nav>
+                <button id="mudar-tema" class="theme-toggle">
+                    <img id="theme-icon" src="img/Icon/sol-br.png" alt="Tema">
+                </button>
+                <a id="theme-icon-sair" href="login.html">
+                    <img src="img/Icon/sair-br.png" alt="Sair">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="banner-content">
+            <!-- <h1>Bem-vindo ao Nosso Salão</h1> -->
+            <h1 id="title"></h1>
+            <button class="open-popup-button" id="open-popup-button">MARCAR HORÁRIO</button>
+        </div>
+    </section>
+    <div class="popup-agendamento" id="popup-agendamento" style="display: none;">
+        <div class="header-agendamento">
+            <div class="title-agendamento">Agendar Serviço</div>
+            <div class="close-agendamento" id="close-agendamento">&times;</div>
+        </div>
+        <div class="content-agendamento">
+            <form id="horario-form" action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione o serviço</option>
+                    <option value="Cortes" data-valor="30">Cortes</option>
+                    <option value="Coloração" data-valor="60">Coloração</option>
+                    <option value="Tratamento" data-valor="40">Tratamento</option>
+                    <option value="Escovas" data-valor="50">Escovas</option>
+                    <option value="Penteados" data-valor="80">Penteados</option>
+                    <option value="Manicure" data-valor="20">Manicure</option>
+                    <option value="Alongamento" data-valor="180">Alongamento</option>
+                    <option value="Pedicure" data-valor="20">Pedicure</option>
+                    <option value="Spa Dos Pés" data-valor="30">Spa Dos Pés</option>
+                    <option value="Maquiagem" data-valor="100">Maquiagem</option>
+                    <option value="Design De Sobrancelhas" data-valor="25">Design De Sobrancelhas</option>
+                    <option value="Extensão De Cílios" data-valor="90">Extensão De Cílios</option>
+                    <option value="Epilação Com Cera" data-valor="50">Epilação Com Cera</option>
+                    <option value="Pacotes De Noiva" data-valor="800">Pacotes De Noiva</option>
+                    <option value="Pacote De Manutenção Da Beleza" data-valor="300">Pacote De Manutenção Da Beleza</option>
+                    <option value="Pacote Dia De Princesa" data-valor="500">Pacote Dia De Princesa</option>
+                </select>
+                <span id="valor-servico"></span><br>
+                <label for="profissional">Escolha o profissional:</label>
+                <select id="profissional" name="profissional" required>
+                    <option value="Valeria Valesca" data-descricao="Proprietária e especialista em Nail Design, Alongamento e Nail Art.">Valeria Valesca</option>
+                    <option value="Joelson Lima" data-descricao="Especialista em Cortes e Colorista Profissional.">Joelson Lima</option>
+                    <option value="Paulo Sergio" data-descricao="Especialista em Estética Corporal e Depilação.">Paulo Sergio</option>
+                    <option value="Mariana Cruz" data-descricao="Designer de Sobrancelhas e Maquiadora Profissional.">Mariana Cruz</option>
+                    <option value="Rafael Souza" data-descricao="Especialista em Tratamento e Design Capilar.">Rafael Souza</option>
+                    <option value="Daniele Oliveira" data-descricao="Maquiadora Profissional e especialista em Beleza Facial.">Daniele Oliveira</option>
+                    <option value="Ruan Ulisses" data-descricao="Especialista em Penteados para Noivas e Beleza Nupcial.">Ruan Ulisses</option>
+                    <option value="Beatriz Neres" data-descricao="Especialista em Extensão de Cílios e Designer de Cílios.">Beatriz Neres</option>
+                    <option value="Janaina Bonfim" data-descricao="Especialista em Penteados e Consultora de Escovas.">Janaina Bonfim</option>                    
+                </select>
+                <div id="profissional-info"></div>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required><br>
+                <label for="hora">Horário:</label>
+                <select id="hora" name="hora" required>
+                    <option value="">Selecione um horário</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Deixe sua mensagem"></textarea>
+                <button class="open-popup-button" type="submit">Agendar</button>
+            </form>
+        </div>
+    </div>
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <img src="img/Logotipo/4.png" alt="Salão de Beleza">
+                <div class="text">
+                    <h2>CONHEÇA O Studio Glimmer</h2>
+                    <p>O nosso salão de beleza oferece uma ampla gama de serviços para cuidar da sua aparência e bem-estar. Nossa equipe qualificada e experiente está pronta para atendê-lo e proporcionar uma experiência única. Venha nos visitar e descubra um ambiente onde cada detalhe é pensado para você.</p>
+                    <p>Além dos tradicionais serviços de manicure, pedicure e cabeleireiro, também oferecemos tratamentos faciais, depilação e SPAs relaxantes. Utilizamos produtos de alta qualidade e estamos sempre atualizados com as últimas tendências e técnicas do mercado de beleza.</p>
+                    <p>No nosso salão, acreditamos que cada cliente merece um atendimento personalizado e de excelência. Nossa missão é fazer você se sentir bem, valorizando a sua beleza natural. Seja bem-vindo ao STUDIO GLIMMER!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="servicos">
+        <div class="servicos">
+            <div id="servicos">
+                <h1>Conheça</h1>
+                <h2>Alguns Serviços</h2>
+                <div class="container">
+                    <div id="cabeleireiro" class="card">
+                        <img src="img/Servicos/Cortes.jpg" alt="Cabeleireiro">
+                        <h2>Cabeleireiro</h2>
+                        <p>Corte, mechas, luzes, técnicas de alisamento e coloração: Oferecemos a orientação necessária para resultados surpreendentes para cada perfil.</p>
+                        <a href="Index.html"><button>Agendar</button></a>
+                    </div>
+                    <div id="noiva" class="card">
+                        <img src="img/Servicos/Noiva.jpg" alt="Dia da noiva">
+                        <h2>Dia da Noiva</h2>
+                        <p>A noiva recebe todas as atenções com extrema dedicação. Programas carinhosamente preparados para sua escolha.</p>
+                        <a href="Index.html"><button>Agendar</button></a>
+                    </div>
+                    <div id="barbearia" class="card">
+                        <img src="img/Servicos/Manicure.jpg" alt="Manicure">
+                        <h2>Manicure</h2>
+                        <p>Oferecemos cuidados completos para suas mãos, desde a clássica manicure francesa até as últimas tendências em nail art. Saia com unhas deslumbrantes e saudáveis!</p>
+                        <a href="Index.html"><button>Agendar</button></a>
+                    </div>
+                    <div id="mais" class="card">
+                        <img src="img/Servicos/Princesa.jpg" alt="Dia de Princesa">
+                        <h2>Princess Day</h2>
+                        <p>Desfrute de um dia especial no Studio Glimmer com tratamento capilar, penteado, limpeza de pele, maquiagem, manicure e pedicure. Sinta-se renovada e radiante!</p>
+                        <a href="Index.html"><button>Agendar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="galeria" id="galeria">
+        <div class="container" >
+            <h2>Nossa Galeria</h2>
+        <div class = "img_galeria" id = "img_galeria">
+            <img src="img/gale_img1_pb.jpg" alt="Imagem 1 da galeria" onmouseover="this.src='img/gale_img1.jpg'" onmouseout="this.src='img/gale_img1_pb.jpg'"  >
+            <img src="img/gale_img2_pb.jpg" alt="Imagem 2 da galeria" onmouseover="this.src='img/gale_img2.jpg'" onmouseout="this.src='img/gale_img2_pb.jpg'" >
+            <img src="img/gale_img3_pb.jpg" alt="Imagem 3 da galeria" onmouseover="this.src='img/gale_img3.jpg'" onmouseout="this.src='img/gale_img3_pb.jpg'">
+            <img src="img/gale_img4_pb.jpg" alt="Imagem 4 da galeria" onmouseover="this.src='img/gale_img4.jpg'" onmouseout="this.src='img/gale_img4_pb.jpg'">
+            <img src="img/gale_img5_pb.jpg" alt="Imagem 5 da galeria" onmouseover="this.src='img/gale_img5.jpg'" onmouseout="this.src='img/gale_img5_pb.jpg'">
+            <img src="img/gale_img6_pb.jpg" alt="Imagem 6 da galeria" onmouseover="this.src='img/gale_img6.jpg'" onmouseout="this.src='img/gale_img6_pb.jpg'">
+            <img src="img/gale_img7_pb.jpg" alt="Imagem 7 da galeria" onmouseover="this.src='img/gale_img7.jpg'" onmouseout="this.src='img/gale_img7_pb.jpg'">
+            <img src="img/gale_img8_pb.jpg" alt="Imagem 8 da galeria" onmouseover="this.src='img/gale_img8.jpg'" onmouseout="this.src='img/gale_img8_pb.jpg'">       
+        </div>
+        </div>
+    </section>
+    <hr>
+    <section class="equipe">
+        <div class="container">
+            <h1>Nossa Equipe</h1>
+            <div class="equipe-container">
+                <div class="equipe-card">
+                    <div class="equipe-image">
+                        <img src="img/Profissionais/P1.png" alt="Valeria Valesca">
+                    </div>
+                    <h2 class="equipe-title">Valeria Valesca</h2>
+                    <p class="equipe-subtitle">Fundadora, Proprietária</p>
+                    <p class="equipe-phone">@valeria.valesca_</p>
+                </div>
+                <div class="equipe-card">
+                    <div class="equipe-image">
+                        <img src="img/Profissionais/P2.jpeg" alt="Joelson Lima">
+                    </div>
+                    <h2 class="equipe-title">Joelson Lima</h2>
+                    <p class="equipe-subtitle">Cabeleireiro</p>
+                    <p class="equipe-phone">@jhoelson_limaa</p>
+                </div>
+                <div class="equipe-card">
+                    <div class="equipe-image">
+                        <img src="img/Profissionais/P3.png" alt="Paulo Sergio">
+                    </div>
+                    <h2 class="equipe-title">Paulo Sergio</h2>
+                    <p class="equipe-subtitle">Pedicure</p>
+                    <p class="equipe-phone">@paulinhofilho2503</p>
+                </div>
+                <div class="equipe-card">
+                    <div class="equipe-image">
+                        <img src="img/Profissionais/P4.png" alt="Mariana Cruz">
+                    </div>
+                    <h2 class="equipe-title">Mariana Cruz</h2>
+                    <p class="equipe-subtitle">Designer</p>
+                    <p class="equipe-phone">@marianaa.cruz_</p>
+                </div>
+            </div>                
+            <div class="ver-mais">
+                <a href="Profissionais.html">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+    <div class="whatsapp-icon">
+        <a href="mensagem.html" class="whatsapp-icon">   
+            <img src="img/Icon/iconewhatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <hr>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="img/Logotipo/Logo.min.png" alt="Logo" id="footer-logo">
+                </div>
+                <div class="footer-col">
+                    <p>Endereço: Rua Alegre, 123, Serra do Ramalho, Bahia</p>
+                    <p>Telefone: (00) 1234-5678</p>
+                    <p>Email: contato@studioglimmer.com.br</p>
+                </div>
+                <div class="footer-col">
+                    <p>Horário de Funcionamento:</p>
+                    <p>Seg-Sex: 9:00-20:00</p>
+                    <p>Dom: 9:00-15:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>        
+    <script src="Js/modo_escuro.js"></script>
+    <script src="Js/menu.js"></script>
+    <script src="Js/agendamento.js"></script>
+</body>
+</html>

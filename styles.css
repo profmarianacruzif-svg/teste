@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* -------------------HEADER------------------- */
+header {
+    width: 100%;
+    padding: 20px 4%;
+    position: fixed;
+    /* background-color: #664F39; */
+    top: 0;
+    left: 0;
+    transition: 1s;
+    z-index: 1000;
+}
+header.rolagem {
+    background-color: #664F39;
+    padding: 10px 4%;
+}
+header.rolagem a, header.rolagem ul li a {
+    color: #fff;
+}
+header img {
+    width: 170px; 
+    height: auto; 
+    max-height: 70px; 
+    margin-right: 40px;
+}
+header.rolagem #logo {
+    visibility: hidden;
+}
+header i {
+    font-size: 30px;
+    color: #fff;
+}
+header ul {
+    list-style-type: none;
+}
+header ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+header ul li a {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+header ul li a:hover {
+    color: black;
+}
+#theme-icon-sair img{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+#theme-icon-sair:hover img{
+    content : url('../img/Icon/sair.png');
+}
+/* -------------------BANNER------------------- */
+.banner {
+    height: 100vh;
+    background-image: url('../img/Salao/Login.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.banner h1 {
+    font-family: Georgia, serif;
+    font-size: 4em;
+    color: #fff;
+    margin-bottom: 20px; 
+}
+.banner-content button {
+  background-color: #664F39;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.banner-content button:hover {
+  background-color: #A08165;
+}
+/* -------------------ICON WHATSAPP------------------- */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    z-index: 9999;
+}
+.whatsapp-icon img {
+    width: 50px;
+    height: auto;
+}
+/* -------------------SOBRE - HOME------------------- */
+.about {
+    padding: 60px 0;
+}
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.about-content img {
+    width: 500px;
+    height: auto;
+    margin-right: 20px;
+}
+.about-content .text {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto; 
+}
+.about-content h2 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+.about-content p {
+    font-size: 1.2em;
+    color: #664F39; 
+    text-align: center;
+    line-height: 1.8; 
+    margin: 10px 0; 
+}
+/* -------------------SERVICOS HOME------------------- */
+#servicos {
+    padding: 60px 0;
+}
+.servicos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#servicos h1{
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: -20px;
+}
+#servicos h2 {
+    margin: 0;
+    text-align: center;
+    color: #664F39;
+    font-size: 2.5em;
+}
+#servicos .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+#servicos .card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(143, 121, 121, 0.1);
+    border: 2px solid #B89B95;
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-top: 30px;
+}    
+#servicos .card:hover {
+    transform: scale(1.05);
+}
+#servicos .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+#servicos .card h2 {
+    margin-top: 10px;
+    color: #664F39;
+}
+#servicos .card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    color: #664F39;
+}
+#servicos button {
+    background-color: #664F39;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+#servicos button:hover {
+    background-color: #B89B95;
+}
+#servicos .agendamento {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* -------------------GALERIA HOME------------------- */
+.galeria {
+    padding: 60px 0;
+    background-color: #664F39;
+    }
+.galeria .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+.galeria .container h2 {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 10px; 
+}
+.img_galeria img{
+    width: 300px;
+    height: 450px;
+}
+.img1 :hover{
+   background-image: url("../img/gale_img1.jpg");
+}
+/* -------------------EQUIPE HOME------------------- */
+.equipe {
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 1px;
+}
+.equipe-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.equipe h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.equipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.equipe-card {
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    border: 2px solid #B89B95;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.equipe-image {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 auto 20px;
+    overflow: hidden; 
+}
+.equipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+.equipe-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.equipe-subtitle {
+    color: #664F39;
+    margin-bottom: 10px;
+}
+.equipe-bio {
+    margin-bottom: 15px;
+}
+.equipe-phone {
+    font-size: 1.1rem;
+    color: #9B8176;
+}
+.ver-mais {
+    text-align: center;
+    margin-top: 30px;
+}
+.ver-mais a {
+    font-size: 1.2em;
+    color: #B89B95;
+    text-decoration: none;
+    border: 2px solid #B89B95;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.ver-mais a:hover {
+    background-color: #B89B95;
+    color: #fff;
+}
+/* -------------------DARK MODE------------------- */
+.modo-escuro  {
+    background-color: #000000 !important; 
+    color: #fff !important; 
+  }
+.modo-escuro p {
+    color: #9B8176 !important;
+}
+.modo-escuro .banner-content h1{
+    color: #000000 !important;
+}
+.modo-escuro .popup-agendamento {
+    background-color: #000000 !important; 
+    color: #fff !important;  
+}
+.modo-escuro .popup-agendamento label {
+    color: #fff !important;  
+}
+.modo-escuro .footer-content p{
+    color :#fff !important;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.theme-toggle img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+/* -------------------FOOTER------------------- */
+#footer {
+    background-color: #664F39;
+    color: #ffffff;
+    padding: 10px 0; 
+}
+.footer-content {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+.footer-col {
+    flex: 1; 
+    text-align: center; 
+}
+#footer-logo {
+    max-width: 180px;
+}
+.footer-col p {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin: 5px 0; 
+}
+/* -------------------MARCAR HORARIO------------------- */
+.popup-agendamento {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 650px;
+    max-height: 650px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+  }
+.header-agendamento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  }
+.header-agendamento .title-agendamento {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+.header-agendamento .close-agendamento {
+    font-size: 1em;
+    cursor: pointer;
+    color: #ccc;
+  }
+.content-agendamento {
+    margin-bottom: 0px;
+  }
+.content-agendamento label {
+    font-weight: bold;
+    color: #333;
+  }
+.content-agendamento input,
+.content-agendamento select,
+.content-agendamento textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.content-agendamento button[type="submit"] {
+  background-color: #664F39;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.content-agendamento button[type="submit"]:hover {
+  background-color: #A08165;
+}
+#profissional option::after {
+    content: attr(data-descricao);
+    display: block;
+    font-size: 0.9em; 
+    color: #555; 
+}
+  #profissional-info {
+    font-size: 0.9em; 
+    color: #555; 
+    margin-top: 0px;
+}

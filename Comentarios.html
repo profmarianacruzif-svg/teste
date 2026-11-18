@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Glimmer</title>
+    <link rel="stylesheet" href="css/styles-comentarios.css">
+    <link rel="icon" href="img/Logotipo/icon.png" type="image/png">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="Index.html"><img src="img/Logotipo/Logo.min.png" alt="Nosso Salão" id="logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">HOME</a></li>
+                        <li><a href="Servicos.html">SERVIÇOS</a></li>
+                        <li><a href="Produtos.html">PRODUTOS</a></li>
+                        <li><a href="Profissionais.html">PROFISSIONAIS</a></li>
+                        <li><a href="Comentarios.html">COMENTÁRIOS</a></li>
+                        <li><a href="Agenda.html">minha agenda</a></li>
+                    </ul>
+                </nav>
+                <button id="mudar-tema" class="theme-toggle">
+                    <img id="theme-icon" src="img/Icon/sol-br.png" alt="Tema">
+                </button>
+                <a id="theme-icon-sair" href="login.html">
+                    <img src="img/Icon/sair-br.png" alt="Sair">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Feedback</h1>
+            <div class="depoimentos" id="depoimentos-lista">
+                <div class="depoimento">
+                    <p>Impecável! Fiquei apaixonada pelo resultado do meu cabelo, arrasam muito e estou muito satisfeita com o resultado. A maquiagem feita, maravilhosaaa muito bem produzida!</p>
+                    <p class="cliente">Cliente</p>
+                    <p class="studio">Studio Glimmer</p>
+                </div>
+            </div>
+            <form id="comentario-form">
+                <h2>Deixe seu Comentário</h2>
+                <h3>Seu feedback é importante, compartilhe sua experiência conosco! Sua opinião é muito importante para nós e para outros clientes.</h3>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                <button type="submit">Enviar Comentário</button><br>
+            </form>
+        </div>
+  </main>
+<footer id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <img src="img/Logotipo/Logo.min.png" alt="Logo" id="footer-logo">
+            </div>
+            <div class="footer-col">
+                <p>Endereço: Rua Alegre, 123, Serra do Ramalho, Bahia</p>
+                <p>Telefone: (00) 1234-5678</p>
+                <p>Email: contato@studioglimmer.com.br</p>
+            </div>
+            <div class="footer-col">
+                <p>Horário de Funcionamento:</p>
+                <p>Seg-Sex: 9:00-20:00</p>
+                <p>Dom: 9:00-15:00</p>
+            </div>
+        </div>
+    </div>
+</footer>    
+        <script src="Js/modo_escuro.js"></script>
+        <script src="/Js/menu.js"></script>
+        <script src="Js/comentarios.js"></script>
+</body>
+</html>

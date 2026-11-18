@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Glimmer</title>
+    <link rel="icon" href="img/Logotipo/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles-produtos.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="Index.html"><img src="img/Logotipo/Logo.min.png" alt="Nosso Salão" id="logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">HOME</a></li>
+                        <li><a href="Servicos.html">SERVIÇOS</a></li>
+                        <li><a href="Produtos.html">PRODUTOS</a></li>
+                        <li><a href="Profissionais.html">PROFISSIONAIS</a></li>
+                        <li><a href="Comentarios.html">COMENTÁRIOS</a></li>
+                        <li><a href="Agenda.html">minha agenda</a></li>
+                    </ul>
+                </nav>
+                <button id="mudar-tema" class="theme-toggle">
+                    <img id="theme-icon" src="img/Icon/sol-br.png" alt="Tema">
+                </button>
+                <a id="theme-icon-sair" href="login.html">
+                    <img src="img/Icon/sair-br.png" alt="Sair">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="produtos">
+            <h1>Loja de Produtos</h1>
+            <div class="filtros">
+                <button class="btn-filtro" data-filter="*">Todos</button>
+                <button class="btn-filtro" data-filter=".cabelo">Cabelo</button>
+                <button class="btn-filtro" data-filter=".unhas">Unhas</button>
+                <button class="btn-filtro" data-filter=".maquiagem">Maquiagem</button>
+            </div>
+            <div class="products-container">
+                <div class="produto-card cabelo">
+                    <img src="img/cabelo-completo.jpg" alt="Produto para Cabelo">
+                    <h2>Cuidados Capilares</h2>
+                    <div class="description">
+                        <p>Shampoo, máscara, condicionador e finalizador.</p>
+                        <p>Preço: R$ 500,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card unhas">
+                    <img src="img/esmalte-metalico.jpg" alt="Produto para Unhas">
+                    <h2>Esmalte Metalizado</h2>
+                    <div class="description">
+                        <p>Cores modernas e elegantes para um visual sofisticado nas unhas.</p>
+                        <p>Preço: R$ 30,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/kit-batom.jpg" alt="Produto de Maquiagem">
+                    <h2>Batom</h2>
+                    <div class="description">
+                        <p>Cores para labios modernos, elegantes e sempre belos.</p>
+                        <p>Preço: R$ 70,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card cabelo">
+                    <img src="img/oleo-cabelo.jpg" alt="Produto para Cabelo">
+                    <h2>Sérum Capilar</h2>
+                    <div class="description">
+                        <p>Nutrição intensa, fios brilhoso, sedosos, com frizz controlado</p>
+                        <p>Preço: R$ 55,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card unhas">
+                    <img src="img/motor.jpg" alt="Produto para Unhas">
+                    <h2>Lixadeira Elétrica</h2>
+                    <div class="description">
+                        <p>Diversas ponteiras, garantindo acabamento profissional nas unhas.</p>
+                        <p>Preço: R$ 100,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/rimel-premium.jpg" alt="Produto de Maquiagem">
+                    <h2>Máscara para Cílios</h2>
+                    <div class="description">
+                        <p>Volume, alongamento e com fórmula de longa duração dos cílios.</p>
+                        <p>Preço: R$ 65,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card cabelo">
+                    <img src="img/mascara-cabelo.jpg" alt="Produto para Cabelo">
+                    <h2>Máscara Capilar</h2>
+                    <div class="description">
+                        <p>Nutrição e reparação, restaurando a saúde e o brilho dos fios</p>
+                        <p>Preço: R$ 50,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card unhas">
+                    <img src="img/gel-base.jpg" alt="Produto para Unhas">
+                    <h2>Gel Construtor Universal</h2>
+                    <div class="description">
+                        <p>Fácil aplicação, alta durabilidade e acabamento resistente e natural.</p>
+                        <p>Preço: R$ 100,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/coretivo.jpg" alt="Produto de Maquiagem">
+                    <h2>Corretivo</h2>
+                    <div class="description">
+                        <p>Cobre imperfeições dando um acabamento uniforme e natural.</p>
+                        <p>Preço: R$ 70,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/po.jpg" alt="Produto para Cabelo">
+                    <h2>Pó Compacto</h2>
+                    <div class="description">
+                        <p>Controla o brilho da pele e dá acabamento matte e suave.</p>
+                        <p>Preço: R$ 40,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/sombra-gliter.jpg" alt="Produto para Unhas">
+                    <h2>Glitter</h2>
+                    <div class="description">
+                        <p>Para adicionar um toque de glamour e brilho aos olhos.</p>
+                        <p>Preço: R$ 45,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+                <div class="produto-card maquiagem">
+                    <img src="img/mascara-facial.jpg" alt="Produto de Maquiagem">
+                    <h2>Hidratante Facial</h2>
+                    <div class="description">
+                        <p>Nutre profundamente a pele, proporcionando maciez e brilho.</p>
+                        <p>Preço: R$ 60,00</p>
+                    </div>
+                    <a href="Mensagem.html" class="bnt-produto">Quero Este</a>
+                </div>
+            </div>
+            <br>
+            <div id="productsContainer" class="products-container">
+                <!-- Produtos serão carregados aqui dinamicamente -->
+            </div>
+        </section>
+    </main>      
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="img/Logotipo/Logo.min.png" alt="Logo" id="footer-logo">
+                </div>
+                <div class="footer-col">
+                    <p>Endereço: Rua Alegre, 123, Serra do Ramalho, Bahia</p>
+                    <p>Telefone: (00) 1234-5678</p>
+                    <p>Email: contato@studioglimmer.com.br</p>
+                </div>
+                <div class="footer-col">
+                    <p>Horário de Funcionamento:</p>
+                    <p>Seg-Sex: 9:00-20:00</p>
+                    <p>Dom: 9:00-15:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>    
+    <script src="js/mostrar-produtos.js"></script>
+    <script src="js/modo_escuro.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script> <!-- Inclua este script para o filtro -->
+</body>
+</html>
